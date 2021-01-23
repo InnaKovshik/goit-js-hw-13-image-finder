@@ -24,6 +24,9 @@ refs.searchForm.addEventListener ("submit", e =>{
 function updateImagesMarkup(fotoCard) {
     const markup = cardTpl(fotoCard);
     refs.galleryContainer.insertAdjacentHTML('beforeend', markup);
+    if(markup){
+        refs.loadMore.classList.remove('is-hidden')
+    }
 }
 
 refs.loadMore.addEventListener('click', () =>{
